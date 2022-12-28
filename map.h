@@ -6,7 +6,7 @@
 /*   By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 20:40:27 by tpoungla          #+#    #+#             */
-/*   Updated: 2022/12/26 18:05:38 by tpoungla         ###   ########.fr       */
+/*   Updated: 2022/12/27 20:08:45 by tpoungla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,23 @@ typedef struct s_map
 	char		**map;
 }	t_map;
 
-typedef struct s_map_status
+typedef struct s_main
 {
-	t_map			map_data;
+	t_map			data;
 	unsigned int	no_of_collect;
 	unsigned int	collect_count;
 	unsigned int	exit_status;
-	t_vector		map_size;
-	t_vector		player_pos;
-}	t_map_status;
+	t_vector		player;
+}	t_main;
 
 # define TRUE 1
 # define FALSE 0
 # define MAP_DUP_CHAR_ERR "map contains duplicate characters\n"
 # define MAP_INVL_CHAR_ERR "map contains invalid character\n"
 
-int	valid_char(char c);
-int	valid_component(char *str);
+int		valid_char(char c);
+int		valid_component(char **str);
+void	get_map_size(t_main *p, char *str);
+void	get_map_data(t_main *p, char *str);
 
 #endif
