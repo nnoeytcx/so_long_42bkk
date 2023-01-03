@@ -6,7 +6,7 @@
 /*   By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 17:10:36 by tpoungla          #+#    #+#             */
-/*   Updated: 2022/12/29 04:41:17 by tpoungla         ###   ########.fr       */
+/*   Updated: 2023/01/03 16:39:33 by tpoungla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,29 @@ void	get_player_pos(t_main *p)
 			{
 				p->player.x = i;
 				p->player.y = j;
+				break ;
+			}
+			j++;
+		}
+		i++;
+	}
+}
+
+void	get_exit_pos(t_main *p)
+{
+	int		i;
+	int		j;
+
+	i = 0;
+	while (p->data.map[i])
+	{
+		j = 0;
+		while (p->data.map[i][j] && p->data.map[i][j] != '\n')
+		{
+			if (p->data.map[i][j] == 'E')
+			{
+				p->exit.x = i;
+				p->exit.y = j;
 				break ;
 			}
 			j++;

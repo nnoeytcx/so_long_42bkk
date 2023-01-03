@@ -6,7 +6,7 @@
 /*   By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 20:39:19 by tpoungla          #+#    #+#             */
-/*   Updated: 2022/12/29 04:39:45 by tpoungla         ###   ########.fr       */
+/*   Updated: 2023/01/03 16:44:11 by tpoungla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	check_list(t_main *p, int *num)
 	p->collect_count = 0;
 	get_player_pos(p);
 	if (!valid_wall(p))
+		return (FALSE);
+	if (!valid_path(p))
 		return (FALSE);
 	return (TRUE);
 }
