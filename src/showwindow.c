@@ -6,12 +6,20 @@
 /*   By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 20:40:27 by tpoungla          #+#    #+#             */
-/*   Updated: 2023/05/30 01:12:36 by tpoungla         ###   ########.fr       */
+/*   Updated: 2023/06/19 00:28:16 by tpoungla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../mlx/mlx.h"
 #include "solong.h"
+
+void	ft_putexit(t_main *p, int n, int m)
+{
+	if (p->collect_count == p->no_of_collect)
+		ft_put_pic(p, "pic/open.xpm", n * 32, m * 32);
+	else
+		ft_put_pic(p, "pic/close.xpm", n * 32, m * 32);
+}
 
 int	mlx_close(void *ptr)
 {

@@ -6,7 +6,7 @@
 /*   By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 20:39:19 by tpoungla          #+#    #+#             */
-/*   Updated: 2023/05/30 02:44:35 by tpoungla         ###   ########.fr       */
+/*   Updated: 2023/06/19 00:26:43 by tpoungla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,13 @@ void	ft_output(t_main *p)
 		while (j < p->data.size.x)
 		{
 			if (p->data.map[i][j] == '1')
-				ft_put_pic(p, "pic/wall.xpm", i * 32, j * 32);
+				ft_put_pic(p, "pic/watertile.xpm", i * 32, j * 32);
 			else if (p->data.map[i][j] == '0')
 				ft_put_pic(p, "pic/grass.xpm", i * 32, j * 32);
 			else if (p->data.map[i][j] == 'C')
 				ft_put_pic(p, "pic/muuk.xpm", i * 32, j * 32);
 			else if (p->data.map[i][j] == 'E')
-				ft_put_pic(p, "pic/wfall.xpm", i * 32, j * 32);
+				ft_put_pic(p, "pic/close.xpm", i * 32, j * 32);
 			if (i == p->player.x && j == p->player.y)
 				ft_put_pic(p, "pic/player.xpm", i * 32, j * 32);
 			j++;
@@ -85,7 +85,7 @@ void	ft_output_util(t_main *p, int n, int m)
 		while (j < p->data.size.x)
 		{
 			if (p->data.map[i][j] == 'E')
-				ft_put_pic(p, "pic/wfall.xpm", i * 32, j * 32);
+				ft_putexit(p, i, j);
 			else if (i == p->player.x + n && j == p->player.y + m)
 				ft_put_pic(p, "pic/grass.xpm", i * 32, j * 32);
 			if (i == p->player.x && j == p->player.y)

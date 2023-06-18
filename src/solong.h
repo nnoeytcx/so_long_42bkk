@@ -6,7 +6,7 @@
 /*   By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 20:40:27 by tpoungla          #+#    #+#             */
-/*   Updated: 2023/05/30 03:51:29 by tpoungla         ###   ########.fr       */
+/*   Updated: 2023/06/19 00:19:27 by tpoungla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,7 @@ int		**check_visit(t_main *p);
 void	ft_output_util(t_main *p, int n, int m);
 void	ft_free_map(t_main *p);
 void	ft_free_vi(int **visited);
+void	ft_putexit(t_main *p, int n, int m);
+void	ft_put_pic(t_main *p, char *pic, int n, int m);
 
 #endif

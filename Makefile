@@ -6,14 +6,14 @@
 #    By: tpoungla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/26 06:43:19 by tpoungla          #+#    #+#              #
-#    Updated: 2023/05/30 03:20:26 by tpoungla         ###   ########.fr        #
+#    Updated: 2023/05/30 15:30:17 by tpoungla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 
 # CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g 
 
 CC = gcc
 
